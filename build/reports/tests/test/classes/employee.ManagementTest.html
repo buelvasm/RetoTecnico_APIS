@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ManagementTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ManagementTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/employee.html">employee</a> &gt; ManagementTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.095s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testParallel()</td>
+<td class="success">5.095s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>23:10:30.290 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1683605430288
+23:10:30.305 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 4 features to complete
+23:10:31.681 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 &gt; DELETE https://dummy.restapiexample.com/api/v1/delete/2
+1 &gt; Host: dummy.restapiexample.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; GET https://dummy.restapiexample.com/api/v1/employee/1
+1 &gt; Host: dummy.restapiexample.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 &gt; GET https://dummy.restapiexample.com/api/v1/employees
+1 &gt; Host: dummy.restapiexample.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 &gt; POST https://dummy.restapiexample.com/api/v1/create
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 41
+1 &gt; Host: dummy.restapiexample.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;test&quot;,&quot;salary&quot;:&quot;123&quot;,&quot;age&quot;:&quot;23&quot;}
+
+23:10:32.412 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 728
+1 &lt; 200
+1 &lt; Date: Tue, 09 May 2023 04:10:32 GMT
+1 &lt; Server: Apache
+1 &lt; Cache-Control: no-cache, private
+1 &lt; Cache-Control: max-age=21600
+1 &lt; X-RateLimit-Limit: 60
+1 &lt; X-RateLimit-Remaining: 57
+1 &lt; Upgrade: h2,h2c
+1 &lt; Connection: Upgrade
+1 &lt; Expires: Tue, 09 May 2023 10:10:32 GMT
+1 &lt; Vary: Accept-Encoding
+1 &lt; host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 &lt; X-Endurance-Cache-Level: 2
+1 &lt; X-nginx-cache: WordPress
+1 &lt; Content-Type: application/json
+{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:{&quot;name&quot;:&quot;test&quot;,&quot;salary&quot;:&quot;123&quot;,&quot;age&quot;:&quot;23&quot;,&quot;id&quot;:2615},&quot;message&quot;:&quot;Successfully! Record has been added.&quot;}
+
+23:10:32.412 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 731
+1 &lt; 429
+1 &lt; Date: Tue, 09 May 2023 04:10:32 GMT
+1 &lt; Server: Apache
+1 &lt; X-RateLimit-Limit: 60
+1 &lt; X-RateLimit-Remaining: 57
+1 &lt; retry-after: 60
+1 &lt; x-ratelimit-reset: 1683605492
+1 &lt; Cache-Control: no-cache, private
+1 &lt; Upgrade: h2,h2c
+1 &lt; Connection: Upgrade
+1 &lt; Vary: Accept-Encoding
+1 &lt; host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 &lt; X-Endurance-Cache-Level: 2
+1 &lt; X-nginx-cache: WordPress
+1 &lt; Content-Type: text/html; charset=UTF-8
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+23:10:32.415 [pool-1-thread-1] ERROR com.intuit.karate - classpath:employee/delete/employee.delete.feature:6
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 731, url: https://dummy.restapiexample.com/api/v1/delete/2, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/delete/employee.delete.feature:6
+23:10:32.424 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 &gt; PUT https://dummy.restapiexample.com/api/v1/update/21
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 44
+1 &gt; Host: dummy.restapiexample.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Manuel&quot;,&quot;salary&quot;:&quot;5000&quot;,&quot;age&quot;:&quot;27&quot;}
+
+23:10:32.481 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 799
+1 &lt; 429
+1 &lt; Date: Tue, 09 May 2023 04:10:34 GMT
+1 &lt; Server: nginx/1.21.6
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; X-RateLimit-Limit: 60
+1 &lt; X-RateLimit-Remaining: 56
+1 &lt; retry-after: 59
+1 &lt; x-ratelimit-reset: 1683605492
+1 &lt; Cache-Control: no-cache, private
+1 &lt; Vary: Accept-Encoding
+1 &lt; host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 &lt; X-Endurance-Cache-Level: 2
+1 &lt; X-nginx-cache: WordPress
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+23:10:32.484 [pool-1-thread-2] ERROR com.intuit.karate - classpath:employee/get/employee-get.feature:6
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 799, url: https://dummy.restapiexample.com/api/v1/employee/1, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/get/employee-get.feature:6
+23:10:32.508 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 826
+1 &lt; 429
+1 &lt; Date: Tue, 09 May 2023 04:10:34 GMT
+1 &lt; Server: nginx/1.21.6
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; X-RateLimit-Limit: 60
+1 &lt; X-RateLimit-Remaining: 55
+1 &lt; retry-after: 59
+1 &lt; x-ratelimit-reset: 1683605492
+1 &lt; Cache-Control: no-cache, private
+1 &lt; Vary: Accept-Encoding
+1 &lt; host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 &lt; X-Endurance-Cache-Level: 2
+1 &lt; X-nginx-cache: WordPress
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+23:10:32.511 [pool-1-thread-3] ERROR com.intuit.karate - classpath:employee/get/employee-get.feature:12
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 826, url: https://dummy.restapiexample.com/api/v1/employees, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/get/employee-get.feature:12
+23:10:32.883 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 458
+1 &lt; 429
+1 &lt; Date: Tue, 09 May 2023 04:10:33 GMT
+1 &lt; Server: Apache
+1 &lt; X-RateLimit-Limit: 60
+1 &lt; X-RateLimit-Remaining: 54
+1 &lt; retry-after: 59
+1 &lt; x-ratelimit-reset: 1683605492
+1 &lt; Cache-Control: no-cache, private
+1 &lt; Upgrade: h2,h2c
+1 &lt; Connection: Upgrade
+1 &lt; Vary: Accept-Encoding
+1 &lt; host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 &lt; X-Endurance-Cache-Level: 2
+1 &lt; X-nginx-cache: WordPress
+1 &lt; Content-Type: text/html; charset=UTF-8
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+23:10:32.885 [pool-1-thread-4] ERROR com.intuit.karate - classpath:employee/put/employee-put.feature:7
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 458, url: https://dummy.restapiexample.com/api/v1/update/21, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/put/employee-put.feature:7
+---------------------------------------------------------
+feature: classpath:employee/delete/employee.delete.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 1,2545
+---------------------------------------------------------
+
+23:10:33.323 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;fail&gt;&gt; feature 1 of 4 (3 remaining) classpath:employee/delete/employee.delete.feature
+---------------------------------------------------------
+feature: classpath:employee/get/employee-get.feature
+scenarios:  2 | passed:  0 | failed:  2 | time: 2,6750
+---------------------------------------------------------
+
+23:10:33.439 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;fail&gt;&gt; feature 2 of 4 (2 remaining) classpath:employee/get/employee-get.feature
+---------------------------------------------------------
+feature: classpath:employee/post/employee-post.feature
+scenarios:  1 | passed:  1 | failed:  0 | time: 1,2541
+---------------------------------------------------------
+
+23:10:33.490 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;pass&gt;&gt; feature 3 of 4 (1 remaining) classpath:employee/post/employee-post.feature
+---------------------------------------------------------
+feature: classpath:employee/put/employee-put.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 0,4636
+---------------------------------------------------------
+
+23:10:33.528 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;fail&gt;&gt; feature 4 of 4 (0 remaining) classpath:employee/put/employee-put.feature
+Karate version: 1.2.0.RC4
+======================================================
+elapsed:   3,78 | threads:    4 | thread time: 5,65 
+features:     4 | skipped:    0 | efficiency: 0,37
+scenarios:    5 | passed:     1 | failed: 4
+======================================================
+&gt;&gt;&gt; failed features:
+status code was: 429, expected: 200, response time in milliseconds: 458, url: https://dummy.restapiexample.com/api/v1/update/21, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/put/employee-put.feature:7
+status code was: 429, expected: 200, response time in milliseconds: 731, url: https://dummy.restapiexample.com/api/v1/delete/2, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/delete/employee.delete.feature:6
+status code was: 429, expected: 200, response time in milliseconds: 799, url: https://dummy.restapiexample.com/api/v1/employee/1, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/get/employee-get.feature:6
+status code was: 429, expected: 200, response time in milliseconds: 826, url: https://dummy.restapiexample.com/api/v1/employees, response: 
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+            &lt;div class=&quot;code&quot;&gt;
+                429            &lt;/div&gt;
+
+            &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+                Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+classpath:employee/get/employee-get.feature:12
+&lt;&lt;&lt;
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC4
+file:///C:/Users/USUARIO/IdeaProjects/RetoTecnico_APIS/build/karate-reports/karate-summary.html
+===================================================================
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.delete.employee.delete.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.get.employee-get.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.post.employee-post.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.put.employee-put.json' contains 1 features
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 8/05/2023 11:10:34 PM</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="employee.ManagementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-09T04:10:29" hostname="SQABOG-SQA-4103" time="5.095">
+  <properties/>
+  <testcase name="testParallel()" classname="employee.ManagementTest" time="5.095"/>
+  <system-out><![CDATA[23:10:30.290 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1683605430288
+23:10:30.305 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 4 features to complete
+23:10:31.681 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > DELETE https://dummy.restapiexample.com/api/v1/delete/2
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > GET https://dummy.restapiexample.com/api/v1/employee/1
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://dummy.restapiexample.com/api/v1/employees
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 > Accept-Encoding: gzip,deflate
+
+
+23:10:31.681 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > POST https://dummy.restapiexample.com/api/v1/create
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 41
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 > Accept-Encoding: gzip,deflate
+{"name":"test","salary":"123","age":"23"}
+
+23:10:32.412 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 728
+1 < 200
+1 < Date: Tue, 09 May 2023 04:10:32 GMT
+1 < Server: Apache
+1 < Cache-Control: no-cache, private
+1 < Cache-Control: max-age=21600
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 57
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Expires: Tue, 09 May 2023 10:10:32 GMT
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: application/json
+{"status":"success","data":{"name":"test","salary":"123","age":"23","id":2615},"message":"Successfully! Record has been added."}
+
+23:10:32.412 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 731
+1 < 429
+1 < Date: Tue, 09 May 2023 04:10:32 GMT
+1 < Server: Apache
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 57
+1 < retry-after: 60
+1 < x-ratelimit-reset: 1683605492
+1 < Cache-Control: no-cache, private
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: text/html; charset=UTF-8
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+23:10:32.415 [pool-1-thread-1] ERROR com.intuit.karate - classpath:employee/delete/employee.delete.feature:6
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 731, url: https://dummy.restapiexample.com/api/v1/delete/2, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/delete/employee.delete.feature:6
+23:10:32.424 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > PUT https://dummy.restapiexample.com/api/v1/update/21
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 44
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Manuel","salary":"5000","age":"27"}
+
+23:10:32.481 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 799
+1 < 429
+1 < Date: Tue, 09 May 2023 04:10:34 GMT
+1 < Server: nginx/1.21.6
+1 < Content-Type: text/html; charset=UTF-8
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 56
+1 < retry-after: 59
+1 < x-ratelimit-reset: 1683605492
+1 < Cache-Control: no-cache, private
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+23:10:32.484 [pool-1-thread-2] ERROR com.intuit.karate - classpath:employee/get/employee-get.feature:6
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 799, url: https://dummy.restapiexample.com/api/v1/employee/1, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/get/employee-get.feature:6
+23:10:32.508 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 826
+1 < 429
+1 < Date: Tue, 09 May 2023 04:10:34 GMT
+1 < Server: nginx/1.21.6
+1 < Content-Type: text/html; charset=UTF-8
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 55
+1 < retry-after: 59
+1 < x-ratelimit-reset: 1683605492
+1 < Cache-Control: no-cache, private
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+23:10:32.511 [pool-1-thread-3] ERROR com.intuit.karate - classpath:employee/get/employee-get.feature:12
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 826, url: https://dummy.restapiexample.com/api/v1/employees, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/get/employee-get.feature:12
+23:10:32.883 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 458
+1 < 429
+1 < Date: Tue, 09 May 2023 04:10:33 GMT
+1 < Server: Apache
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 54
+1 < retry-after: 59
+1 < x-ratelimit-reset: 1683605492
+1 < Cache-Control: no-cache, private
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: text/html; charset=UTF-8
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+23:10:32.885 [pool-1-thread-4] ERROR com.intuit.karate - classpath:employee/put/employee-put.feature:7
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 458, url: https://dummy.restapiexample.com/api/v1/update/21, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/put/employee-put.feature:7
+---------------------------------------------------------
+feature: classpath:employee/delete/employee.delete.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 1,2545
+---------------------------------------------------------
+
+23:10:33.323 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 4 (3 remaining) classpath:employee/delete/employee.delete.feature
+---------------------------------------------------------
+feature: classpath:employee/get/employee-get.feature
+scenarios:  2 | passed:  0 | failed:  2 | time: 2,6750
+---------------------------------------------------------
+
+23:10:33.439 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 4 (2 remaining) classpath:employee/get/employee-get.feature
+---------------------------------------------------------
+feature: classpath:employee/post/employee-post.feature
+scenarios:  1 | passed:  1 | failed:  0 | time: 1,2541
+---------------------------------------------------------
+
+23:10:33.490 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 4 (1 remaining) classpath:employee/post/employee-post.feature
+---------------------------------------------------------
+feature: classpath:employee/put/employee-put.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 0,4636
+---------------------------------------------------------
+
+23:10:33.528 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 4 of 4 (0 remaining) classpath:employee/put/employee-put.feature
+Karate version: 1.2.0.RC4
+======================================================
+elapsed:   3,78 | threads:    4 | thread time: 5,65 
+features:     4 | skipped:    0 | efficiency: 0,37
+scenarios:    5 | passed:     1 | failed: 4
+======================================================
+>>> failed features:
+status code was: 429, expected: 200, response time in milliseconds: 458, url: https://dummy.restapiexample.com/api/v1/update/21, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/put/employee-put.feature:7
+status code was: 429, expected: 200, response time in milliseconds: 731, url: https://dummy.restapiexample.com/api/v1/delete/2, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/delete/employee.delete.feature:6
+status code was: 429, expected: 200, response time in milliseconds: 799, url: https://dummy.restapiexample.com/api/v1/employee/1, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/get/employee-get.feature:6
+status code was: 429, expected: 200, response time in milliseconds: 826, url: https://dummy.restapiexample.com/api/v1/employees, response: 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+classpath:employee/get/employee-get.feature:12
+<<<
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC4
+file:///C:/Users/USUARIO/IdeaProjects/RetoTecnico_APIS/build/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  <system-err><![CDATA[may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.delete.employee.delete.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.get.employee-get.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.post.employee-post.json' contains 1 features
+may 08, 2023 11:10:34 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\USUARIO\IdeaProjects\RetoTecnico_APIS\build\karate-reports\employee.put.employee-put.json' contains 1 features
+]]></system-err>
+</testsuite>
